@@ -1,0 +1,32 @@
+
+.grid-container {
+    display: grid;
+    height: 100vw;
+    grid-template-rows: 12% 80% 10%;
+    grid-template-columns: 100%;
+}
+
+.grid {
+    border: 0px solid;
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+.parallax { 
+    /* The image used */
+    background-image: url("http://schoolconstructionnews.com/wp-content/uploads/2017/09/FOMHouston.800.jpg");
+  
+    /* Set a specific height */
+    height: 200vmax; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
