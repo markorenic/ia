@@ -13,5 +13,3 @@
     </div>
 
 </body>
-
-This is empty
