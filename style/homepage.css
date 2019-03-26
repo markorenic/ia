@@ -6,9 +6,9 @@
 
 }
 .flex-box{
-    width: fit-content;  /* Or whatever */
+    width: fit-content;
     height: fit-content;
-    max-width: 40vw; /* Or whatever */
+    max-width: 40vw;
     margin: 30px;
    /* flex-grow: 1; */
    /* flex-basis: 100%; */
