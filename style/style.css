@@ -35,3 +35,31 @@ body {
       font-family: SourceSansPro;
       src: url('\resources\SourceSansPro-Regular.otf')
   }
+
+.left{
+    border-right: solid 3px #c6e4f8;
+}
+
+.right{
+    border-left: solid 3px #c6e4f8;
+    margin-left: -3px;
+}
+
+
+.items{
+    background-color: rgb(12, 59, 92, 0.7);;
+    border: 1px solid #d1d1d1;
+    margin: 10px;
+    padding: 15px;
+    color: #d1d1d1;
+}
+
+.rightimage{
+    position: relative;
+    left: 550px;
+}
+
+.leftimage{
+    position: relative;
+    left: -23px;
+}

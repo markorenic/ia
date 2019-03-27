@@ -17,3 +17,8 @@
     background-color: #48aef3;
     background-blend-mode: hue;
 }
+
+.image{
+    width: 30vw;
+    height: auto;
+}
