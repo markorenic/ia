@@ -1,17 +1,13 @@
 .flex-container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
-
+    display: grid;
+    grid-auto-columns: 60vw 30vw;
 }
 .flex-box{
     width: fit-content;
     height: fit-content;
-    max-width: 40vw;
+    max-width: 60vw;
+    align-content: center;
     margin: 30px;
-   /* flex-grow: 1; */
-   /* flex-basis: 100%; */
     border-radius: 25px;
     border: 2px solid rgb(98, 209, 243);
     padding: 20px;
