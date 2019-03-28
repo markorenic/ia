@@ -44,13 +44,3 @@ body {
     padding: 15px;
     color: #d1d1d1;
 }
-
-.rightimage{
-    position: relative;
-    left: 550px;
-}
-
-.leftimage{
-    position: relative;
-    left: -23px;
-}
