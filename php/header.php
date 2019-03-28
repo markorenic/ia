@@ -14,6 +14,7 @@
             <a class="" href="index.php" id="Home">Home</a>
             <a class="" href="faq.php" id="Faq">About us</a>
             <a class="" href="news.php" id="News">Soon</a>
+            <a class="" href="http://ia/phplogin/index.php" id="Login"> Login </a>
         
     </div>
 
