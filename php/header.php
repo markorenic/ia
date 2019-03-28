@@ -18,7 +18,7 @@
             <a class="" href="news.php" id="News">Soon</a>
             <a class="" href="http://ia/phplogin/index.php" id="Login"> 
             <?php if (isset($_SESSION['loggedin'])){
-                echo "Sign Out";
+                echo "Logout";
             } else {
                 echo "Login";
             }
