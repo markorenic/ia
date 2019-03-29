@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 // Change this to your connection info.
 $DATABASE_HOST = 'localhost';
@@ -43,6 +44,8 @@ if ($stmt->num_rows > 0) {
 		$_SESSION['name'] = $_POST['username'];
 		$_SESSION['id'] = $id;
 		echo 'Welcome ' . $_SESSION['name'] . '!';
+		echo $_SESSION['loggedin'];
+		echo '<a href="../index.php">Go back to homepage </a> /';
 	} else {
 		echo 'Incorrect password!';
 	}
