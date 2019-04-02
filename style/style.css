@@ -1,3 +1,12 @@
+html, 
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
 
 .grid-container {
     display: grid;
@@ -22,7 +31,7 @@ body {
     background-image: url("http://schoolconstructionnews.com/wp-content/uploads/2017/09/FOMHouston.800.jpg");
   
     /* Set a specific height */
-    height: 200vmax; 
+    height: 100%; 
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;

@@ -20,7 +20,7 @@ ob_start();
             <?php if(isset($_SESSION['id'])): ?>
             <a class="link" href="http://ia/phplogin/logout.php" style="">Logout</a>
             <?php else: ?>
-            <a class="link" href="http://ia/phplogin/index.php" style="">Login</a>
+            <a class="link" href="http://ia/phplogin/login.php" style="">Login</a>
             <?php endif; ?>
                 </div>
 

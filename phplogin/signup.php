@@ -21,7 +21,7 @@
                 <i class="fas fa-at"></i>
                 </label>
 				<input type="email" name="email" placeholder="School email" id="email" required>
-				<input type="submit" value="Login">
+				<input type="submit" value="Sign Up">
 			</form>
 		</div>
 	</body>

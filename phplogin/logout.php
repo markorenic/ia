@@ -1,7 +1,10 @@
 <?php
+
 session_start();
 session_destroy();
-flush();
+header ("Location: ../index.php");
 ?>
-
-<a href="index.php">back</a>
+<body>
+You have succesfully logged out </br>
+<a href="../index.php">Click here to return back to Homepage</a>
+</body>

@@ -18,6 +18,7 @@
 				</label>
 				<input type="password" name="password" placeholder="Password" id="password" required>
 				<input type="submit" value="Login">
+				<a class="signup" href="signup.php">Sign up</a>
 			</form>
 		</div>
 	</body>
