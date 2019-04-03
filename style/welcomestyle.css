@@ -1,9 +1,9 @@
 
-.wrapper {
+.welcome-container {
     display: grid;
     grid-template-columns: 3;
     grid-gap: 10px;
-    grid-auto-rows: 80% 50%;
+    grid-auto-rows: 45% 50%;
   }
   .one { 
     grid-column: 1 / 4;
@@ -21,22 +21,22 @@
     grid-column: 3;
     grid-row: 4;
   }
-
+/*
 .parralax {
     padding: 0;
     margin: 0;
     /* The image used */
-    background-image: url("http://schoolconstructionnews.com/wp-content/uploads/2017/09/FOMHouston.800.jpg");
-  
+    /* background-image: url("http://schoolconstructionnews.com/wp-content/uploads/2017/09/FOMHouston.800.jpg"); */
+
     /* Set a specific height */
-    height: 100%; 
+    /* height: 100%;  */
   
     /* Create the parallax scrolling effect */
-    background-attachment: fixed;
+    /* background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+  } */
 
   
   @font-face {
@@ -114,3 +114,32 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+/*
+<figure class="show">
+      <img src="http://themarklee.com/wp-content/uploads/2013/12/snowying.jpg" width="100%" />
+      <figcaption>Description</figcaption> 
+    </figure>
+    <figure>
+      <img src="http://themarklee.com/wp-content/uploads/2013/12/starlight.jpg" width="100%" />
+      <figcaption>Description</figcaption> 
+    </figure>
+    <figure>
+      <img src="http://themarklee.com/wp-content/uploads/2013/12/snowstorm.jpg" width="100%" />
+      <figcaption>Description</figcaption> 
+    </figure>
+    <figure>
+      <img src="http://themarklee.com/wp-content/uploads/2013/12/misty-winter-afternoon.jpg" width="100%" />
+      <figcaption>Description</figcaption> 
+    </figure>
+    <figure>
+      <img src="http://themarklee.com/wp-content/uploads/2013/12/good-morning.jpg" width="100%" />
+      <figcaption>Description</figcaption> 
+    </figure>
+    <figure>
+      <img src="http://themarklee.com/wp-content/uploads/2013/12/driving-home-for-christmas.jpg" width="100%" />
+      <figcaption>Description</figcaption> 
+    </figure>
+    <span class="prev">&laquo;</span>
+    <span class="next">&raquo;</span>
+    */

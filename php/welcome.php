@@ -1,61 +1,47 @@
 <header>
     <link rel="stylesheet" href="style/welcomestyle.css">
 </header>
-<div class="wrapper">
-  <div class="one">
-
-    <div class="slideshow-container">
-      
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="resources\img_nature_wide.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="resources\img_snow_wide.jpg" style="width:100%">
-        <div class="text">Caption Two</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="resources\img_mountains_wide.jpg" style="width:100%">
-        <div class="text">Caption Three</div>
-      </div>
-
-      </div>
-      <br>
-
-      <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-    </div>
-  </div>
+<div class="welcome-container parallax">
+  <div class="one">One</div>
   <div class="two">Two</div>
   <div class="three">Three</div>
   <div class="four">Four</div>
 </div>
 
 <script>
-var slideIndex = 0;
-showSlides();
+var counter = 0, // to keep track of current slide
+    $items = $('.slideshow figure'), // a collection of all of the slides, caching for performance
+    numItems = $items.length; // total number of slides
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+// this function is what cycles the slides, showing the next or previous slide and hiding all the others
+var showCurrent = function(){
+    var itemToShow = Math.abs(counter%numItems);// uses remainder (aka modulo) operator to get the actual index of the element to show  
+   
+  $items.removeClass('show'); // remove .show from whichever element currently has it
+  $items.eq(itemToShow).addClass('show');    
+};
+
+// add click events to prev & next buttons 
+$('.next').on('click', function(){
+    counter++;
+    showCurrent(); 
+});
+$('.prev').on('click', function(){
+    counter--;
+    showCurrent(); 
+});
+
+// if touch events are supported then add swipe interactions using TouchSwipe https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+if('ontouchstart' in window){
+  $('.slideshow').swipe({
+    swipeLeft:function() {
+      counter++;
+      showCurrent(); 
+    },
+    swipeRight:function() {
+      counter--;
+      showCurrent(); 
+    }
+  });
 }
 </script>
