@@ -1,7 +1,7 @@
 <?php
 ob_start();
 session_start();
-// Change this to your connection info.
+// // DBs Constants
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
