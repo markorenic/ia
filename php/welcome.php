@@ -1,8 +1,23 @@
 <header>
     <link rel="stylesheet" href="style/welcomestyle.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="resources/slideshow/responsiveslides.min.js"></script>
+    <script>
+      $(function() {
+        $(".rslides").responsiveSlides({
+      auto: true,             // Boolean: Animate automatically, true or false
+      speed: 500,            // Integer: Speed of the transition, in milliseconds
+      timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+    })});
+    </script>
 </header>
 <div class="welcome-container parallax">
-  <div class="one">One</div>
+  <div class="one">
+    <ul class="rslides">
+      <li><img src="resources/slideshow1.jpg" alt="image1" class="image"></li>
+      <li><img src="resources/slideshow2.jpg" alt="image2" class="image"></li>
+    </ul>
+  </div>
   <div class="two">Two</div>
   <div class="three">Three</div>
   <div class="four">Four</div>
