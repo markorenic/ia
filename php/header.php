@@ -4,7 +4,6 @@ ob_start();
 
 <html>
 <header>
-<link rel="stylesheet" href="style/style.css">
 <link rel="stylesheet" href="style/navbar.css">
 </header>
 <div class="header-container topnav">

@@ -12,7 +12,7 @@
     </script>
 </header>
 <div class="welcome-container parallax">
-  <div class="one">
+  <div class="one shadow">
     <ul class="rslides">
       <li><img src="resources/slideshow1.jpg" alt="image1" class="image"></li>
       <li><img src="resources/slideshow2.jpg" alt="image2" class="image"></li>
