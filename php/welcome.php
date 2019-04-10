@@ -3,24 +3,39 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="resources/slideshow/responsiveslides.min.js"></script>
     <script>
-      $(function() {
-        $(".rslides").responsiveSlides({
-      auto: true,             // Boolean: Animate automatically, true or false
-      speed: 500,            // Integer: Speed of the transition, in milliseconds
-      timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
-    })});
+    $(function() {
+       $(".rslides").responsiveSlides({
+         auto: true,             // Boolean: Animate automatically, true or false
+         speed: 500,            // Integer: Speed of the transition, in milliseconds
+         timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+       })
+     });
     </script>
 </header>
 <div class="welcome-container parallax">
   <div class="one shadow">
     <ul class="rslides">
-      <li><img src="resources/slideshow1.jpg" alt="image1" class="image"></li>
-      <li><img src="resources/slideshow2.jpg" alt="image2" class="image"></li>
+      <li><img src="resources/slideshow1.jpg" alt="image1" class="image" id="slideshow1"></li>
+      <li><img src="resources/slideshow2.jpg" alt="image2" class="image" id="slideshow2"></li>
     </ul>
   </div>
-  <div class="two">Two</div>
-  <div class="three">Three</div>
-  <div class="four">Four</div>
+  <div class="two shadow">
+    <div class="box">
+      <h1>Upcoming Events</h1>
+      <h2> Event - Date - Location</h2>
+      <p> Medicin Meeting - Friday - A200 </p>
+    </div>
+  </div>
+  <div class="three shadow">
+    <div class="box">
+      <h1>SAT</h1>
+    </div>
+  </div>
+  <div class="four shadow">
+  <div class="box">
+      <h1>ACT</h1>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -60,3 +75,6 @@ if('ontouchstart' in window){
   });
 }
 </script>
+
+<style>
+</style>
