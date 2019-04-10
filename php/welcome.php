@@ -39,6 +39,14 @@
 </div>
 
 <script>
+ $(function() {
+    $(".rslides").responsiveSlides({
+      auto: true,             // Boolean: Animate automatically, true or false
+      speed: 500,            // Integer: Speed of the transition, in milliseconds
+      timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+    })
+  });
+
 var counter = 0, // to keep track of current slide
     $items = $('.slideshow figure'), // a collection of all of the slides, caching for performance
     numItems = $items.length; // total number of slides
@@ -60,19 +68,6 @@ $('.prev').on('click', function(){
     counter--;
     showCurrent(); 
 });
-
-// if touch events are supported then add swipe interactions using TouchSwipe https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
-if('ontouchstart' in window){
-  $('.slideshow').swipe({
-    swipeLeft:function() {
-      counter++;
-      showCurrent(); 
-    },
-    swipeRight:function() {
-      counter--;
-      showCurrent(); 
-    }
-  });
 }
 </script>
 

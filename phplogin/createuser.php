@@ -1,4 +1,6 @@
 <?php
+
+
 ob_start();
 session_start();
 // DBs Constants
@@ -20,21 +22,41 @@ if ( !isset($_POST['email'], $_POST['password'], $_POST['vpassword'] ) ) {
 }
 
 
+
+
+
 if (isset($_POST['signupsubmit'])) {
     $username = $_POST['email'];
     $password = $_POST['password'];
     $vpassword = $_POST['vpassword'];
-    if(strlen($password>8)){
-        if ($password === $vpassword){
-            //protect agains SQL injection
-            if ($stmt = $con->prepare("INSERT INTO `accounts` (`id`, `username`, `password`, `power`) VALUES (NULL, '$username', '$password', '1')")) {
-                // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
-                $stmt->bind_param('s', $_POST['username']);
-                $stmt->execute();
-                header("Location: login.php?signupsuccess");
-                exit();
+    $len = (strlen($password));
+    $query = mysqli_query($con,"SELECT username FROM accounts WHERE username='".$username."'");
+    if (mysqli_num_rows($query) == 0){
+        if ($len > 8){
+            if ($password === $vpassword){
+                    //protect agains SQL injection
+                    if ($stmt = $con->prepare("INSERT INTO `accounts` (`id`, `username`, `password`, `power`) VALUES (NULL, '$username', '$password', '1')")) {
+                        // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
+                        $stmt->bind_param('s', $_POST['username']);
+                        $stmt->execute();
+                        header("Location: login.php?signupsuccess?$username");
+                        exit();
+                        }
+                    }
+            else{
+                $error = "Passwords do not match";
             }
         }
+        else{
+            $error = "Short password";
+        }
     }
-    //if passwords dont match take back to signup
-    header("Location: signup.php?signupfailed");}
+    else{
+        $error = "Username already exists";
+    }
+}
+else{
+    $error = "Unkown Error";
+}
+
+header("Location: signup.php?signupfailed?$error");
