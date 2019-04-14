@@ -14,9 +14,10 @@ ob_start();
             <span class="empty">&nbsp</span>
             <span class="empty">&nbsp</span>
             <a class="" href="index.php" id="Home">Home</a>
-            <a class="" href="faq.php" id="Faq">About us</a>
-            <a class="" href="news.php" id="News">Soon</a> 
             <?php if(isset($_SESSION['id'])): ?>
+            <a class="" href="https://bsh.managebac.com/" id="ManageBac">ManageBac</a>
+            <a class="" href="https://app.bridge-u.com/student/" id="ManageBac">Bridge-U</a>
+            <a class="" href="/phplogin/profile.php" id="ManageBac">Preference</a>
             <a class="link" href="http://ia/phplogin/logout.php" style="">Logout</a>
             <?php else: ?>
             <a class="link" href="http://ia/phplogin/login.php" style="">Login</a>
