@@ -31,6 +31,9 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 if ($stmt->num_rows > 0) {
 	$stmt->bind_result($id, $password);
 	$stmt->fetch();
+	$query = 'SELECT power FROM accounts WHERE username = $id';
+	$_SESSION['power']=mysqli_query($con,$query);
+	
 	// Account exists, now we verify the password.
     // Note: remember to use password_hash in your registration file to store the hashed passwords.
     //currently this is just password without incription, to incrpit use next line instead of the ===password
@@ -49,8 +52,10 @@ if ($stmt->num_rows > 0) {
 		header ("Location: ../index.php");
 	} else {
 		echo 'Incorrect password!';
+		header ("Location: login.php?error");
 	}
 } else {
 	echo 'Incorrect username!';
+	header ("Location: login.php?incorrectpassword");
 }
 $stmt->close();
