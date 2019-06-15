@@ -11,7 +11,6 @@
             console.dir($checkboxes);
             $checkboxes.change(function(){
                 console.log(this.checked);});//log when state changes
-        
         });
     </script>
 </head>
