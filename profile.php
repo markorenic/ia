@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<? session_start();
+<?php session_start();
+ob_start();
 ?>
 <head>
     <link rel="stylesheet" href="style/style.css">
@@ -10,10 +11,25 @@
             var $checkboxes = $('input[name="country[]"]');
             console.dir($checkboxes);
             $checkboxes.change(function(){
+                
                 console.log(this.checked);});//log when state changes
         });
     </script>
+
 </head>
+
+<?php
+$conn = mysqli_connect("localhost", "root", "", "phplogin");
+$email = $_SESSION['name'];
+$query = "SELECT * FROM accounts WHERE username='$email'";
+$result = mysqli_query($conn, $query);
+echo "ads";
+
+while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+    echo "adsad";
+    if ($row["eu"] == 0) {echo "ëu";}
+}
+?>
 
 <body>
     <div class="grid-profilecontainer">
@@ -33,7 +49,7 @@
             <form class="grid padding form-container" action="/profile.php" method="post" name="profileForm" id="profileForm">
                     <fieldset>
                     Countries:<br>
-                    <input type="checkbox" name="country[]" checked value="Europe">Europe<br>
+                    <input type="checkbox" name="country[]"  value="Europe">Europe<br>
                     <input type="checkbox" name="country[]" checked value="Australia">Australia<br>
                     <input type="checkbox" name="country[]" checked value="China">China<br>
                     <input type="checkbox" name="country[]" checked value="Canada">Canada<br>
@@ -95,7 +111,7 @@
                     <option value="computerscience">Computer Science</option>
                     </select><br>
                     </fieldset>
-                    <button type="submit" form="profileForm" value="Submit">Submit Preference</button>
+                    <button type="submit" form="profileForm" value="Submit">Save</button>
                 </form>
                 <div></div>
                 
