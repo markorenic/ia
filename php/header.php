@@ -18,9 +18,9 @@ ob_start();
             <a class="" href="https://bsh.managebac.com/" id="ManageBac">ManageBac</a>
             <a class="" href="https://app.bridge-u.com/student/" id="ManageBac">Bridge-U</a>
             <a class="" href="/profile.php" id="ManageBac">Preference</a>
-            <a class="link" href="http://ia/phplogin/logout.php" style="">Logout</a>
+            <a class="link" href="http://localhost:8888/phplogin/logout.php" style="">Logout</a>
             <?php else: ?>
-            <a class="link" href="http://ia/phplogin/login.php" style="">Login</a>
+            <a class="link" href="http://localhost:8888/phplogin/login.php" style="">Login</a>
             <?php endif; ?>
                 </div>
 
